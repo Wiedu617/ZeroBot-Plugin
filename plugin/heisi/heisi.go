@@ -82,7 +82,7 @@ func init() { // 插件主体
 			}
 			m := message.Message{ctxext.FakeSenderForwardNode(ctx, message.Image(pic.String()))}
 			if id := ctx.Send(m).ID(); id == 0 {
-				ctx.SendChain(message.Text("ERROR: 可能被风控或下载图片用时过长，请耐心等待"))
+				ctx.SendChain(message.Text("ERROR: 可能被风控或下载图片用时过长请耐心等待"))
 			}
 		})
 }
